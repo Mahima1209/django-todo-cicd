@@ -4,12 +4,12 @@ FROM python:3
 RUN apt-get update && apt-get install -y python3-distutils
 
 WORKDIR /data
-COPY requirements.txt .
+# COPY requirements.txt .
 
 # Then install requirements
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
 
-COPY . .
+# COPY . .
 
 RUN python manage.py migrate
 
